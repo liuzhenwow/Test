@@ -13,7 +13,6 @@ import java.util.Collection;
 public class EmployeeController {
     @Autowired
     EmployeeDao employeeDao;
-
     @GetMapping(value = "/emps")
     public String list(Model model){
         Collection<Employee> all = employeeDao.getAll();
