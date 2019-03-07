@@ -18,7 +18,11 @@ public class EmployeeDao {
 
     static {
         employees =new HashMap<Integer,Employee>();
-        employees.put(1001,new Employee(1001,"E-AA","aa@163.com",1,new Department(101,"DD-AA")));
+        employees.put(1001,new Employee(1001,"E-AA","aa@163.com",1,new Department(101,"DD-AA"),"1990-01-09"));
+        employees.put(1002,new Employee(1002,"E-BB","aa@163.com",1,new Department(102,"DD-BB"),"1990-01-09"));
+        employees.put(1003,new Employee(1003,"E-CC","aa@163.com",1,new Department(103,"DD-CC"),"1990-01-09"));
+        employees.put(1004,new Employee(1004,"E-DD","aa@163.com",1,new Department(104,"DD-DD"),"1990-01-09"));
+        employees.put(1005,new Employee(1005,"E-EE","aa@163.com",1,new Department(105,"DD-EE"),"1990-01-09"));
     }
 
     private static Integer initId = 1006;
