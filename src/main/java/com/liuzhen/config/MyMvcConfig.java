@@ -1,11 +1,9 @@
 package com.liuzhen.config;
 
-import com.liuzhen.component.LoginHandlerInterceptor;
 import com.liuzhen.component.MyLocaleResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -13,10 +11,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 //@EnableWebMvc//全面接管springMVC的配置
 @Configuration
 public class MyMvcConfig extends WebMvcConfigurerAdapter {
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/aaa").setViewName("/success");
-    }
+
+//    @Override
+//    public void addViewControllers(ViewControllerRegistry registry) {
+//        registry.addViewController("").setViewName("/success");
+//    }
 
     @Bean
     public WebMvcConfigurerAdapter webMvcConfigurerAdapter(){

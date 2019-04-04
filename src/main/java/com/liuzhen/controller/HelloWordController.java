@@ -1,13 +1,10 @@
 package com.liuzhen.controller;
 
+import com.liuzhen.exception.UserNotExistException;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 @Controller
@@ -15,7 +12,8 @@ public class HelloWordController {
     @RequestMapping("/hello")
     @ResponseBody
     public String hello(){
-        return "Hello Word!";
+        throw new UserNotExistException();
+//        return "Hello Word!";
     }
 
     @RequestMapping("/success")
